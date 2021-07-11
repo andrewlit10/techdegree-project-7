@@ -1,0 +1,148 @@
+<header>
+  <h1></h1>
+  <div id="contain bell icon">
+    <svg id="bell icon"></svg>
+  </div>
+</header>
+
+
+<nav>
+  <a>
+    <img>
+  </a>
+</nav>
+
+
+<main>
+<div class="main-header"> //row
+  <h2 class="headline">Dashboard</h2>
+  <div class="main-header-search">
+    <input type="search" placeholder="Search..." />
+  </div>
+  <!-- alert banner -->
+  <div class="alert" id="alert">
+    <!-- JS will have alert here for exceed expectations -->
+  </div>
+
+  <!-- Line graph charts -->
+  <section class="traffic">
+    <div class="traffic-header">
+      <h3>Traffic</h3>
+      <ul class="traffic-nav">
+        <li class="traffic-nav-link">Hourly</li>
+        <li class="traffic-nav-link">Daily</li>
+        <li class="traffic-nav-link active">Weekly</li>
+        <li class="traffic-nav-link">Monthly</li>
+      </ul>
+    </div>
+    <div class="widget-container-full">
+      <!-- elemtn line graph will attach to -->
+      <canvas id="traffic-chart"></canvas>
+    </div>
+
+  </section>
+
+
+  <section class="daily">
+    <h3>Daily Traffic</h3>
+
+    <div class="widget-container-half">
+      <!-- element bar graph will attach to -->
+      <canvas id="daily-chart"></canvas>
+    </div>
+  </section>
+
+  <div class="social-container">
+      <div class="social-image"
+        <!-- svg not shown for efficiency -->
+      </div>
+      <div class="social-text">
+        <p>Twitter</p>
+        <p>10,345</p>
+      </div>
+      <div class="social-image"
+        <!-- svg not shown for efficiency -->
+      </div>
+      <div class="social-text">
+        <p>Facebook</p>
+        <p>18,784</p>
+      </div>
+      <div class="social-image"
+        <!-- svg not shown for efficiency -->
+      </div>
+      <div class="social-text">
+        <p>Instagram</p>
+        <p>44,492</p>
+      </div>
+  </div>
+
+<!-- New Members Widget -->
+
+  <section class="members">
+    <h3>New Members</h3>
+
+    <div class="members-container">
+      <img src="images/member-1.jpg" class="profile-image">
+      <div class="members text">
+        <p>Whitney Wolfe Herd</p>
+        <a href="#">whitney.herd@bumble.com</a>
+      </div>
+      <p>10/15/12</p>
+    </div>
+    <div class="members-container">
+      <img src="images/member-2.jpg" class="profile-image">
+      <div class="members text">
+        <p>Elon Musk</p>
+        <a href="#">elon.musk@tesla.com</a>
+      </div>
+      <p>4/20/69</p>
+    </div>
+    <div class="members-container">
+      <img src="images/member-3.jpg" class="profile-image">
+      <div class="members text">
+        <p>Sheryl Sandberg</p>
+        <a href="#">sheryl.sandberg@facebook.com</a>
+      </div>
+      <p>1/30/07</p>
+    </div>
+    <div class="members-container">
+      <img src="images/member-4.jpg" class="profile-image">
+      <div class="members text">
+        <p>Mark Zuckerburg</p>
+        <a href="#">mark.zuckerburg@facebook.com</a>
+      </div>
+      <p>4/15/03</p>
+    </div>
+  </section>
+
+<!-- messaging widgit -->
+  <section class="message">
+    <h3>Message User</h3>
+
+    <form class="widget-container">
+        <input type="text" placeholder="Search for user" class="form-field" id="userField">
+        <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
+        <button class="button-primary" id="send">Send</button>
+    </form>
+  </section>
+<!-- local settings widget -->
+  <section class="settings">
+    <h3>Settings</h3>
+
+    <!-- custom CSS toggle -->
+
+    <!-- custom CSS toggle -->
+
+    <select class="form-field" id="timezone">
+      <option disabled selected>Select a Timezone</option>
+      <option>PST</option>
+      <option>MST</option>
+      <option>EST</option>
+    </select>
+    <div class="settings-button">
+      <button class="button-primary" id="save">Save</button>
+      <button class="button-disabled" id="cancel">Cancel</button>
+    </div>
+  </section>
+
+</main>
