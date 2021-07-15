@@ -1,4 +1,14 @@
-<header>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Web App Dashboard</title>
+    <meta name="viewport" content="width=320px, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/toggle-switch.css" rel="stylesheet">
+  </head>
+<body class="grid-container">
+<header class="header">
   <h1></h1>
   <div id="contain bell icon">
     <svg id="bell icon"></svg>
@@ -7,15 +17,15 @@
 </header>
 
 
-<nav>
+<nav class="navigation">
   <a>
     <img>
   </a>
 </nav>
 
 
-<main>
-<div class="main-header"> //row
+<main class="main">
+<div class="main-header">
   <h2 class="headline">Dashboard</h2>
   <div class="main-header-search">
     <input type="search" placeholder="Search..." />
@@ -25,7 +35,9 @@
     <!-- JS will have alert here for exceed expectations -->
   </div>
 
-  <!-- Line graph charts -->
+
+  <!-- TRAFFIC CHART -->
+
   <section class="traffic">
     <div class="traffic-header">
       <h3>Traffic</h3>
@@ -44,6 +56,8 @@
   </section>
 
 
+<!-- DAILY CHART (bar graph) -->
+
   <section class="daily">
     <h3>Daily Traffic</h3>
 
@@ -52,7 +66,20 @@
       <canvas id="daily-chart"></canvas>
     </div>
   </section>
+<!-- DOUGHNUT CHART -->
 
+  <section class="mobile-users">
+    <h3 class="section-title">Mobile Users</h3>
+    <div class="widget-container-half">
+      <!-- element bar graph will attach to -->
+      <canvas id="mobile-chart"></canvas>
+    </div>
+  </section>
+
+
+<!-- SOCIAL STATS SECTION -->
+<section id="social-stats" class="social-statistics">
+  <h3 class="section-title">Social Statistics</h3>
   <div class="social-container">
       <div class="social-image"
         <!-- svg not shown for efficiency -->
@@ -76,12 +103,11 @@
         <p>44,492</p>
       </div>
   </div>
-
+</section>
 <!-- New Members Widget -->
 
   <section class="members">
-    <h3>New Members</h3>
-
+    <h3 class="section-title">New Members</h3>
     <div class="members-container">
       <img src="images/member-1.jpg" class="profile-image">
       <div class="members text">
@@ -116,6 +142,40 @@
     </div>
   </section>
 
+<!-- members activity section -->
+<section class="activity">
+  <h3 class="section-title">Recent Activity</h3>
+  <div class="members-container">
+      <div class="member-section">
+          <img src="images/member-1.jpg" alt="profile-image">
+            <div class="members-text">
+              <p>Whitney Wolfe Herd commented on <span>WebApp's SEO Tips</span></p>
+              <p class="activity-time">4 hours ago</p>
+            </div>
+      </div>
+      <div class="member-section">
+          <img src="images/member-2.jpg" alt="profile-image">
+          <div class="members-text">
+            <p>Elon Musk liked the post <span>Facebook's Changes for 2021</span></p>
+            <p class="activity-time">5 hours ago</p>
+          </div>
+      </div>
+      <div class="member-section">
+          <img src="images/member-3.jpg" alt="profile-image">
+          <div class="members-text">
+            <p>Sheryl Sandberg commented on <span>Facebook's Changes for 2021</span></p>
+            <p class="activity-time">5 hours ago</p>
+          </div>
+      </div>
+      <div class="member-section">
+        <img src="images/member-4.jpg" alt="profile-image">
+        <div class="members-text">
+          <p>Mark Zuckerburg posted <span>WebApp's SEO Tips</span></p>
+          <p class="activity-time">1 day ago</p>
+        </div>
+      </div>
+    </div>
+  </section>
 <!-- messaging widgit -->
   <section class="message">
     <h3>Message User</h3>
@@ -136,10 +196,21 @@
 
     <select class="form-field" id="timezone">
       <option disabled selected>Select a Timezone</option>
-      <option>PST</option>
-      <option>MST</option>
-      <option>EST</option>
-    </select>
+      <option>Turkey Time</option>
+      <option>Atlantic Standard Time (AST)</option>
+      <option>Eastern Standard Time (EST)</option>
+      <option>Central Standard Time (CST)</option>
+      <option>Mountain Standard Time(MST)</option>
+      <option>Pacific Standard Time (PST)</option>
+      <option>Alaska Standard Time (AKST)</option>
+      <option>Hawaii Standard Time (HST)</option>
+      <option>Arabia Daylight Time (ADT)</option>
+      <option>Australian Eastern Time (AET)</option>
+      <option>Afghanistan Time</option>
+      <option>Argentina Time</option>
+      <option>London Time</option>
+      <option>Russia Time</option>
+</select>
     <div class="settings-button">
       <button class="button-primary" id="save">Save</button>
       <button class="button-disabled" id="cancel">Cancel</button>
@@ -147,3 +218,6 @@
   </section>
 
 </main>
+<script src="/js/app.js"></script>
+</body>
+</html>
