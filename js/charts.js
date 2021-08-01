@@ -1,5 +1,9 @@
 const trafficCanvas = document.getElementById('traffic-chart');
-
+const user = document.getElementById("userField");
+const message = document.getElementById("messageField");
+const send = document.getElementById("send");
+const dailyCanvas = document.getElementById("daily-chart");
+const mobileCanvas = document.getElementById("mobile-chart");
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
     "4-10", "11-17", "18-24", "25-31"],
@@ -36,7 +40,7 @@ let trafficChart = new Chart(trafficCanvas, {
 
 // ====== Daily Canvas ====== //
 
-const dailyCanvas = document.getElementById("daily-chart");
+
 // data for daily traffic bar chart
 const dailyData = {
     labels: ["S", "M", "T", "W", "T", "F", "S"],
@@ -69,8 +73,6 @@ let dailyChart = new Chart(dailyCanvas, {
 
 // ======= Mobile Canvas ======//
 
-const mobileCanvas = document.getElementById("mobile-chart");
-
 const mobileData = {
     labels: ["Desktop", "Tablet", "Phones"],
     datasets: [{
@@ -87,13 +89,13 @@ const mobileData = {
 
 const mobileOptions = {
     plugins: {
-        legend: {
-            position: 'right',
-            labels: {
-                boxWidth: 20,
-                fontStyle: 'bold'
-            }
+      legend: {
+        position: 'right',
+        labels: {
+          boxWidth: 20,
+          fontStyle: 'bold'
         }
+      }
     }
 };
 
@@ -104,11 +106,6 @@ let mobileChart = new Chart(mobileCanvas, {
 });
 
 // ====== Messaging Section ====== //
-
-const user = document.getElementById("userField");
-const message = document.getElementById("messageField");
-const send = document.getElementById("send");
-
 send.addEventListener('click', () =>{
     if (user.value === '' && message.value === ''){
         alert("Please fill out user and message fields before sending");
